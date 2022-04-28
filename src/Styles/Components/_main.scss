@@ -1,0 +1,15 @@
+@import '../utils/variables.scss';
+@import '../utils/mixings.scss';
+
+.form{
+    @include column;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cake-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: $spacing-lg $spacing-md;
+}

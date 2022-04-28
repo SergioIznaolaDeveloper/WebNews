@@ -16,7 +16,7 @@ class ListNews extends Component {
     try {
       //simular un retardo de 3 segundos en la aparacicion de fetch
       await new Promise((resolve) =>
-        setTimeout(() => resolve("Terminado"), 2000)
+        setTimeout(() => resolve("Terminado"), 4000)
       );
       const resp = await fetch(
         `https://api.nytimes.com/svc/mostpopular/v2/emailed/7.json?api-key=${apyKey}`
