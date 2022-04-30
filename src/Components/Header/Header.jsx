@@ -6,7 +6,6 @@ export class Header extends Component {
   render() {
     return (
       <header>
-        {/* <img src={Logo} alt="logo" /> */}
         <Nav />
         <div>
           <Context.Consumer>

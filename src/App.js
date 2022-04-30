@@ -1,7 +1,6 @@
 import Header from "./Components/Header/Header";
 import Main from "./Components/Main/Main";
 import Footer from "./Components/Footer/Footer";
-import "./App.css";
 import { Context } from "./Context/Context";
 import { useState } from "react";
 import { BrowserRouter } from "react-router-dom";
@@ -33,7 +32,9 @@ function App() {
   };
 
   const concatAllNews = () => {
-    myNews.length === 0 ? setAllNews(apiNews) : setAllNews([...myNews, ...apiNews]);
+    myNews.length === 0
+      ? setAllNews(apiNews)
+      : setAllNews([...myNews, ...apiNews]);
   };
 
   const data = {
@@ -53,9 +54,9 @@ function App() {
         <Context.Provider value={data}>
           <Header />
           <Main />
-          <Footer />
         </Context.Provider>
       </BrowserRouter>
+      <Footer />
     </div>
   );
 }
