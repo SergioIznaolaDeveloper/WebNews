@@ -1,13 +1,16 @@
-
+@import '../utils/variables.scss';
 header{
     display: flex;
     flex-direction: row;
+    background-color: $menu-color;
     align-items: center;
     justify-content: space-between;
 & > img {
+    background-color: $menu-color;
     width: 3rem;
     margin: 0px 20px;
-
+    margin-bottom: $spacing-lg;
+    margin-top: $spacing-md;
   }
   &__botton {
     cursor: pointer;
@@ -15,5 +18,7 @@ header{
     padding: 5px 10px;
     border-radius: 5px;
     text-decoration: none;
+    color: $menu-color;
+    background-color: $background-color;
   }
 }

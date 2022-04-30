@@ -6,7 +6,7 @@ class Form extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      myNews: [],
+      myNews: {},
     };
   }
   addNew = (event) => {
@@ -20,13 +20,14 @@ class Form extends Component {
     const img = event.target.img.value; // input del from
     const add = this.context.addNew // obtengo la funcion addNew del context
     const newNotice = {title: title, subtitle: subtitle, content:content, section:section, author: author, date:date, img: img }; // seteo el state con user
+    this.setState({ myNews: newNotice }); // seteo el state con noticia
     add(newNotice); // ejecuto loguin con el argumento user
   };
   render() {
     return (
-      <div>
+      <section>
         <p>NUEVA NOTICIA</p>
-        <form onSubmit={this.addNew}>
+        <form className="form" onSubmit={this.addNew}>
           <label htmlFor="title">Title:</label>
           <input type="text" id="title" name="title" /><br />
           <label htmlFor="subtitle">Subtitle:</label>
@@ -42,9 +43,22 @@ class Form extends Component {
           <label htmlFor="img">Image:</label>
           <input type="text" id="img" name="img" /><br />
           <input type="submit" value="Enviar" />
-        </form>
-  
-      </div>
+        </form>.
+        {this.state.myNews.title  ? (
+          <>
+          <p>Noticia agregada</p>
+          <p>{this.state.myNews.title}</p>
+          <p>{this.state.myNews.subtitle}</p>
+          <p>{this.state.myNews.content}</p>
+          <p>{this.state.myNews.author}</p>
+          <p>{this.state.myNews.section}</p>
+          <p>{this.state.myNews.date}</p>
+          <img src={this.state.img} alt="" />
+          </>
+        
+        ) 
+        : ("")}
+      </section>
     );
   }
 }
