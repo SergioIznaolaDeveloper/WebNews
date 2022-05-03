@@ -1,15 +1,16 @@
 @import "../Utils/variables.scss";
 @import "../Utils/mixings.scss";
 
-.card {
+.form {
   @include column;
   border: solid 1px $text-color;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.452);
   border-radius: 5px;
-  max-width: 460px;
+  min-width: 300px;
   background-color: #006d77;
   margin: 10px;
   font-family: "Poppins", sans-serif;
+
   &__title {
     color: $text-color;
     font-weight: 600;
@@ -20,19 +21,22 @@
     background-color: #006d77;
     border-radius: 5px;
   }
-  &__subtitle {
-    font-weight: 600;
+  &__label {
     width: 90%;
-    margin: 5px 0px;
-    padding: 10px;
+    font-weight: 600;
+    color: $text-color;
     border: solid 1px #006d77;
-    background-color: $text-color;
     border-radius: 5px;
+    align-self: flex-start;
+    margin-left: 20px;
+    height: 20px;
   }
-  &__img {
-    width: 100%;
+  &__input {
+    font-weight: 600;
+    margin: 5px 0px;
+    border: solid 1px #006d77;
     border-radius: 5px;
-    border: solid 1px $text-color;
+    width: 90%;
   }
   &__button {
     font-weight: 600;

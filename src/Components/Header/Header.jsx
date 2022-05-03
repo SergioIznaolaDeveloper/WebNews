@@ -5,12 +5,12 @@ import { Context } from "../../Context/Context";
 export class Header extends Component {
   render() {
     return (
-      <header>
+      <header className="header">
         <Nav />
-        <div>
+        <div className="header__user">
           <Context.Consumer>
             {({ user, logout }) => {
-              return <>{user ? <p>Hola {user}</p> : ""}{user ? <button onClick={logout} className="nav__botton">Logout</button> : ""}</>;
+              return <>{user ? <p className="name">User: {user}</p> : ""}{user ? <button onClick={logout} className="nav__botton">Logout</button> : ""}</>;
             }}
           </Context.Consumer>
         </div>

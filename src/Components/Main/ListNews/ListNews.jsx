@@ -15,7 +15,8 @@ class ListNews extends Component {
         `https://api.nytimes.com/svc/mostpopular/v2/emailed/7.json?api-key=${apyKey}`
       );
       const data = await resp.json();
-      const apiNews = data.results.slice(0, 5);
+      const apiNews = data.results.slice(2, 7);
+      console.log(apiNews);
       const notice = await apiNews.map((n,i) => (
         {
         title: n.title,
@@ -24,6 +25,7 @@ class ListNews extends Component {
         author: n.byline,
         date: n.published_date,
         img: n.media[0]["media-metadata"][2].url,
+        link: n.url
       }));
       const add = this.context.addApiNew;
       add(notice);
