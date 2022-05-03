@@ -1,24 +1,31 @@
-@import '../Utils/variables.scss';
-header{
+@import "../Utils/variables.scss";
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background-color: $menu-color;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Poppins", sans-serif;
+  &__user {
+    margin: 10px;
     display: flex;
     flex-direction: row;
-    background-color: $menu-color;
-    align-items: center;
-    justify-content: space-between;
-& > img {
-    background-color: $menu-color;
-    width: 3rem;
-    margin: 0px 20px;
-    margin-bottom: $spacing-lg;
-    margin-top: $spacing-md;
-  }
-  &__botton {
-    cursor: pointer;
-    border: transparent;
-    padding: 5px 10px;
-    border-radius: 5px;
-    text-decoration: none;
-    color: $menu-color;
-    background-color: $background-color;
+    & > .nav__botton {
+      font-weight: 600;
+      padding: 5px 20px;
+      border-radius: 5px;
+      background-color: #ed6a5a;
+      border: solid 1px $text-color;
+      color: $text-color;
+    }
+    & > .name{
+      color: $text-color;
+      font-weight: 600;
+      margin: 0px 15px;
+      
+    }
   }
 }

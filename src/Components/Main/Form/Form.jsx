@@ -32,39 +32,36 @@ class Form extends Component {
   render() {
     return (
       <section>
-        <p>NUEVA NOTICIA</p>
         <form className="form" onSubmit={this.addNew}>
-          <label htmlFor="title">Title:</label>
-          <input type="text" id="title" name="title" />
-          <br />
-          <label htmlFor="subtitle">Subtitle:</label>
-          <input type="text" id="subtitle" name="subtitle" />
-          <br />
-          <label htmlFor="section">Section:</label>
-          <input type="text" id="section" name="section" />
-          <br />
-          <label htmlFor="author">Written by:</label>
-          <input type="text" id="author" name="author" />
-          <br />
-          <label htmlFor="date">Date:</label>
-          <input type="text" id="date" name="date" />
-          <br />
-          <label htmlFor="img">Image:</label>
-          <input type="text" id="img" name="img" />
-          <br />
-          <input type="submit" value="Enviar" />
+          <h2 className="form__title">ADD NEW NOTICE</h2>
+          <label className="form__label" htmlFor="title">Title:</label>
+          <input className="form__input" type="text" id="title" name="title" />
+          <label className="form__label" htmlFor="subtitle">Subtitle:</label>
+          <input className="form__input" type="text" id="subtitle" name="subtitle" />
+          <label className="form__label" htmlFor="section">Section:</label>
+          <input className="form__input" type="text" id="section" name="section" />
+          <label className="form__label" htmlFor="author">Written by:</label>
+          <input className="form__input" type="text" id="author" name="author" />
+          <label className="form__label" htmlFor="date">Date:</label>
+          <input className="form__input" type="text" id="date" name="date" />
+          <label className="form__label" htmlFor="img">Image:</label>
+          <input className="form__input" type="text" id="img" name="img" />
+          <input className="form__button" type="submit" value="Enviar" />
         </form>
-        .
         {this.state.myNews.title ? (
           <section>
-            <p>Noticia agregada</p>
-            <article>
-              <p>{this.state.myNews.title}</p>
-              <p>{this.state.myNews.subtitle}</p>
-              <p>{this.state.myNews.author}</p>
-              <p>{this.state.myNews.section}</p>
-              <p>{this.state.myNews.date}</p>
-              <img src={this.state.myNews.img} alt="newImg" />
+            <p>Noticia agregada...</p>
+            <article className="card">
+              <h2 className="card__title">{this.state.myNews.title}</h2>
+              <img
+                className="card__img"
+                src={this.state.myNews.img}
+                alt="newImg"
+              />
+              <p className="card__subtitle">{this.state.myNews.subtitle}</p>
+              <p className="card__subtitle">{this.state.myNews.author}</p>
+              <p className="card__subtitle">{this.state.myNews.section}</p>
+              <p className="card__subtitle">{this.state.myNews.date}</p>
             </article>
           </section>
         ) : (

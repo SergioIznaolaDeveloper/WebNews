@@ -1,9 +1,10 @@
-@import '../Utils/variables.scss';
+@import "../Utils/variables.scss";
 
-footer {
-    background-color: $menu-color;
-    color: $text-color;
-    bottom: 0;
-    position:absolute;
-    width: 100%;
+.footer {
+  background-color: $menu-color;
+  color: $text-color;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
 }

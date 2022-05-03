@@ -24,6 +24,7 @@ class ListNews extends Component {
         author: n.byline,
         date: n.published_date,
         img: n.media[0]["media-metadata"][2].url,
+        link: n.url
       }));
       const add = this.context.addApiNew;
       add(notice);

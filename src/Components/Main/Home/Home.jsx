@@ -18,13 +18,12 @@ class Home extends Component {
   };
   render() {
     return (
-      <div>
-        <p>Contacto</p>
-        <form onSubmit={this.login}>
-          <label htmlFor="user">Nombre Usuario</label>
-          <input type="text" id="user" name="user" />
-          <input type="submit" value="Enviar" />
-          {(this.state.user) ? <p>{this.state.user}</p> : <p>No hay usuario</p>}
+      <div className="home">
+        <h3 className="home__title">Please, enter your username ⇙</h3>
+        <form className="home__form" onSubmit={this.login}>
+          <input className="home__input" type="text" id="user" name="user" />
+          <input className="home__button" type="submit" value="Enviar" />
+          {(this.state.user) ? <p className="home__result">Logged in as: "{this.state.user}"</p> : <p className="home__result">No user yet</p>}
         </form>
       </div>
     );

@@ -1,0 +1,37 @@
+@import "../Utils/variables.scss";
+@import "../Utils/mixings.scss";
+
+.home {
+  &__title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #ed6a5a;
+    margin: 10px 0px;
+    font-family: "Poppins", sans-serif;
+  }
+  &__input {
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.452);
+    font-weight: 600;
+    height: 20px;
+    margin: 5px 0px;
+    border: transparent;
+    border-radius: 5px;
+    width: 100%;
+  }
+  &__button {
+    font-weight: 600;
+    padding: 5px 20px;
+    margin: 10px 0px;
+    border-radius: 5px;
+    background-color: #ed6a5a;
+    border: solid 1px $text-color;
+    color: $text-color;
+  }
+  &__result {
+    font-size: 20px;
+    font-weight: 600;
+    color: #ed6a5a;
+    margin: 10px 0px;
+    font-family: "Poppins", sans-serif;
+  }
+}
