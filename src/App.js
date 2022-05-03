@@ -11,6 +11,7 @@ function App() {
   const [myNews, setMyNews] = useState([]);
   const [apiNews, setApiNews] = useState([]);
   const [allNews, setAllNews] = useState([]);
+
   //Login
   const login = (name) => {
     setUser(name);
@@ -20,21 +21,27 @@ function App() {
   const logout = () => {
     setUser("");
   };
-  //Add new
+  //Add self news
   const addNew = (newNews) => {
     myNews.length === 0
       ? setMyNews([newNews])
       : setMyNews([...myNews, newNews]);
   };
-
+  //Add api news
   const addApiNew = (notice) => {
-    setApiNews(notice);
+    setApiNews(notice)
   };
-
+  //Contact api & self news in context all news
   const concatAllNews = () => {
     myNews.length === 0
       ? setAllNews(apiNews)
       : setAllNews([...myNews, ...apiNews]);
+  };
+
+  const removeOne = (i) => {
+    const remainingNews = allNews.filter((n, j) => i !== j);
+    console.log(remainingNews);
+    setAllNews(remainingNews);
   };
 
   const data = {
@@ -42,6 +49,7 @@ function App() {
     apiNews,
     myNews,
     user,
+    removeOne,
     addNew,
     login,
     logout,

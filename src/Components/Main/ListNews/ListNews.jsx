@@ -4,26 +4,20 @@ import Card from "./Card/Card";
 const apyKey = process.env.REACT_APP_API_KEY;
 class ListNews extends Component {
   static contextType = Context;
-  constructor(props) {
-    super(props);
-    this.state = {
-      newConvert: "",
-      allNews: "",
-    };
-  }
 
   async componentDidMount() {
     try {
       //simular un retardo de 3 segundos en la aparacicion de fetch
       await new Promise((resolve) =>
-        setTimeout(() => resolve("Terminado"), 4000)
+        setTimeout(() => resolve("Terminado"), 1000)
       );
       const resp = await fetch(
         `https://api.nytimes.com/svc/mostpopular/v2/emailed/7.json?api-key=${apyKey}`
       );
       const data = await resp.json();
-      const apiNews = data.results;
-      const notice = await apiNews.map((n) => ({
+      const apiNews = data.results.slice(0, 5);
+      const notice = await apiNews.map((n,i) => (
+        {
         title: n.title,
         subtitle: n.abstract,
         section: n.section,
@@ -39,9 +33,10 @@ class ListNews extends Component {
       console.log(e);
     }
   }
+
   paintNews = () =>
     this.context.allNews.map((n, i) => (
-      <Card data={n} key={i} />
+      <Card data={n} key={i} remove={() => this.context.removeOne(i)} />
     ));
 
   render() {
