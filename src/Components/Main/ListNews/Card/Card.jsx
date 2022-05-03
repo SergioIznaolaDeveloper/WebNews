@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { Context } from "../../../../Context/Context";
+
+
 class Card extends Component {
   static contextType = Context;
   render() {
@@ -11,6 +13,7 @@ class Card extends Component {
       <p>{author}</p>
       <p>{section}</p>
       <p>{date}</p>
+      <button onClick={this.props.remove}>Borrar</button>
     </article>;
   }
 }

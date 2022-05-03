@@ -4,10 +4,11 @@
 .App {
     text-align: center;
     font-family: 'Roboto Mono', monospace;
-    background-color: $background-color;
     padding-bottom: 2em;
     min-height: 100vh;
     position: relative;
+    background-color: $background-color;
+
 }
     
 .App-header {
