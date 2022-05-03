@@ -13,7 +13,7 @@ class Card extends Component {
       <p className="card__subtitle">Written by: {author}</p>
       <p className="card__subtitle">Section: {section}</p>
       <p className="card__subtitle">Creation: {date}</p>
-      <button className="card__button" onClick={this.props.remove}>Borrar</button>
+      <button className="card__button" onClick={this.props.remove}>Delete New</button>
     </article>;
   }
 }

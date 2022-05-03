@@ -1,6 +1,8 @@
 @import "../Utils/variables.scss";
+@import "../Utils/mixings.scss";
 
 .footer {
+  @include column;
   background-color: $menu-color;
   color: $text-color;
   position: fixed;

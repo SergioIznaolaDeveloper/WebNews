@@ -9,7 +9,7 @@ class Main extends Component {
   render() {
     return (
       <main className="main">
-        <h1 className="main__title">WELLCOME TO YOUR API NEWS PAGE</h1>
+        <h1 className="main__title">WELLCOME TO YOUR NEWS WEB</h1>
         <Routes>
           <Route path="/home" element={<Home />} />
           <Route path="/form" element={<Form />} />

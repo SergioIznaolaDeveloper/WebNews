@@ -1,3 +1,6 @@
+@import "../Utils/variables.scss";
+@import "../Utils/mixings.scss";
+
 .main {
   @include column;
   margin-top: 50px;

@@ -50,7 +50,7 @@ class Form extends Component {
         </form>
         {this.state.myNews.title ? (
           <section>
-            <p>Noticia agregada...</p>
+            <p>Added notice...⬇️</p>
             <article className="card">
               <h2 className="card__title">{this.state.myNews.title}</h2>
               <img

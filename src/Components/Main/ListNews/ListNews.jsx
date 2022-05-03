@@ -15,7 +15,8 @@ class ListNews extends Component {
         `https://api.nytimes.com/svc/mostpopular/v2/emailed/7.json?api-key=${apyKey}`
       );
       const data = await resp.json();
-      const apiNews = data.results.slice(0, 5);
+      const apiNews = data.results.slice(2, 7);
+      console.log(apiNews);
       const notice = await apiNews.map((n,i) => (
         {
         title: n.title,
