@@ -1,6 +1,8 @@
 ### EJERCICIO: Página de noticias
 
-### SKILLS
+<a href="https://6271562397b2df0084f3b267--webnewssergio.netlify.app" width="36" height="36" alt="Deploy" /><h2>👉LINK TO APP👈</h2></a>
+
+### SKILLS 
 
 <p align="left">
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/javascript-colored.svg" width="36" height="36" alt="Javascript" /></a>
