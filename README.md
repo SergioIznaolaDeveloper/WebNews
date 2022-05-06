@@ -1,6 +1,6 @@
 ### EJERCICIO: Página de noticias
 
-<a href="https://6271562397b2df0084f3b267--webnewssergio.netlify.app" width="36" height="36" alt="Deploy" /><h2>👉LINK TO APP👈</h2></a>
+<a href="https://webnewssergio.netlify.app" width="36" height="36" alt="Deploy" /><h2>👉LINK TO APP👈</h2></a>
 
 ### SKILLS 
 
